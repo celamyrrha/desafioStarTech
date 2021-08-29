@@ -1,0 +1,115 @@
+
+{
+ "openapi": "3.0.0",
+ "info": {
+ "description": "Formulário de cadastro usando React e NodeJS desenvolvido como desafio final do Star Tech - Gama Academy em Agosto de 2021.",
+ "version": "1.0.0",
+ "title": "Desafio Final - JobsNet" 
+ },
+ 
+ "servers": [
+  {
+    "url": "http://localhost:5000",
+    "description": "ambiente de desenvolvimento"
+  }
+],
+    "paths": {
+        "/register": {
+          "post": {
+            "summary": "Cadastro de candidato",
+            "description": "Rota de cadastro de candidato que recebe diversos dados pessoais.",
+            "tags": ["candidato"],
+            "requestBody": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "properties": {
+                      "cpf": {
+                        "type": "string"
+                      },
+                      "nome": {
+                        "type": "string"
+                      },
+                      "cargo": {
+                        "type": "string"
+                      },
+                      "dt_nasc": {
+                        "type": "string",
+                        "format": "date" 
+                      },
+                      "est_civil": {
+                        "type": "string"
+                      },
+                      "sexo": {
+                        "type": "string"
+                      },
+                      "endereco": {
+                        "type": "string"
+                      },
+                      "bairro": {
+                        "type": "string"
+                      },
+                      "cidade": {
+                        "type": "string"
+                      },
+                      "cep": {
+                        "type": "string"
+                      },
+                      "tel1": {
+                        "type": "string"
+                      },
+                      "tel2": {
+                        "type": "string"
+                      },
+                      "celular": {
+                        "type": "string"
+                      },
+                      "contato": {
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string"
+                      },
+                      "identidade": {
+                        "type": "string"
+                      },
+                      "veiculo": {
+                        "type": "string"
+                      },
+                      "habilitacao": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "examples": {
+                    "Pedro Marcio": {
+                      "value": {
+                        "cpf": "9999999999999",
+                        "nome": "Pedro Marcio Silva",
+                        "cargo": "Analista",
+                        "dt_nasc": "2021-08-27",
+                        "est_civil": "Solteiro",
+                        "sexo": "Masculino Cis",
+                        "endereco": "Rua das flores, 30",
+                        "bairro": "Santa Rita",
+                        "cidade": "Barbacena",
+                        "cep": "00000-000",
+                        "tel1": "22 225288555",
+                        "tel2": "25555544",
+                        "celular": "22 55589999",
+                        "contato": "22555333666",
+                        "email": "pedro.hiro@gmail.com",
+                        "identidade": "22255599977",
+                        "veiculo": "Sim",
+                        "habilitacao": "Categoria A"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }  
+    }
+ } 
+       
