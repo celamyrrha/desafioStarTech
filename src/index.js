@@ -6,7 +6,7 @@ const routes = require('./routes');
 const app = express();
 const cors = require('cors');
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect('mongodb+srv://admin:pQ7RFxIjlaWdavIv@cluster0.wtg07.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 
 app.use(cors());
 app.use(express.json());
