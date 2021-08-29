@@ -42,7 +42,7 @@ module.exports = {
                 console.log(err);
                 return res.status(500).send('Estamos com problemas :(');
             }
-
+            console.log(err);
             return res.status(200).send(savedCandidate);
         });
     },
