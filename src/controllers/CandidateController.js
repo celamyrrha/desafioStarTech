@@ -27,15 +27,6 @@ module.exports = {
         newCandidate.veiculo = veiculo;
         newCandidate.habilitacao = habilitacao;
 
-      //  const canditateExists = await Candidate.findOne({
-      //      where: { cpf: req.body.cpf}
-     //   })
-
-      //  if (canditateExists){
-     //       return res.status(400).json({
-     //           error: 'Já existe um cadidato com este CPF.'})
-     //   }
-
 
         newCandidate.save((err, savedCandidate) => {
             if (err) {
