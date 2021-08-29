@@ -31,9 +31,9 @@ module.exports = {
         newCandidate.save((err, savedCandidate) => {
             if (err) {
                 console.log(err);
-                return res.status(500).send('Estamos com problemas :(');
+                return res.status(500).send('iti malia deu probleminha!');
             }
-            console.log(err);
+
             return res.status(200).send(savedCandidate);
         });
     },
