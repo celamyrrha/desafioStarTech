@@ -4,6 +4,15 @@ const Candidate = require('../models/Candidate');
 module.exports = {
     async register(req, res) {
 
+        const canditateExists = await Candidate.findOne({
+            where: { cpf: req.body.cpf}
+        })
+
+        if (canditateExists){
+            return res.status(400).json({
+                error: 'Já existe um cadidato com este CPF.'})
+        }
+
         const {cpf, nome, cargo, dt_nasc, est_civil, sexo, endereco, bairro, cidade, cep, tel1, tel2, celular, contato, email, identidade, veiculo, habilitacao} = req.body;
 
         const newCandidate = new Candidate();
