@@ -37,10 +37,6 @@ module.exports = {
                 console.log(err);
                 return res.status(500).send('iti malia deu probleminha!');
             }
-            if (canditateExists){
-                return res.status(400).json({
-                    error: 'Já existe um cadidato com este CPF.'})
-            }
 
             return res.status(200).send(savedCandidate);
         });
