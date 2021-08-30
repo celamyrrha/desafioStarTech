@@ -14,7 +14,7 @@ const CandidateSchema = new mongoose.Schema({
     tel1: { type: String, unique: false, required: false },
     tel2: { type: String, unique: false, required: false },
     celular: { type: String, unique: false, required: true },
-    contato: { type: String, unique: false, required: true },
+    contato: { type: String, unique: false, required: false },
     email: { type: String, unique: false, required: true },
     identidade: { type: String, unique: false, required: false },
     habilitacao: { type: String, unique: false, required: false },
